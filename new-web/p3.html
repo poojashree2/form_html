@@ -1,0 +1,139 @@
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2em;
+    }
+    #outside {
+        background-color: azure;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    form {
+        margin: 0 auto;
+        width: 70%;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+    }
+    #survey-form {
+        background-color: white;
+    }
+    fieldset {
+        border: 1px solid lightgray;
+        margin: 10px;
+    }
+    legend {
+        font-weight: 700;
+    }
+    #number {
+        width: 150px;
+    }
+    div + div {
+        margin-top: 1em;
+    }
+    input, textarea {
+        width: 200px;
+        border: 1px solid #999;
+    }
+    input:focus,textarea:focus {
+        border-color: orangered;
+    }
+    textarea {
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    }
+    .button {
+        padding-left: 90px;
+    }
+    button {
+        margin: .5em;
+        font-size: 1em;
+        text-transform: capitalize;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    #submitbutton {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div id="outside">
+     <form id="survery-form" action="" method="post">
+        <h1 id="title">Application for permission</h1>
+        <p id="description"><b>Note:</b>Form is to be completed at least 21 days prior to date</p>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div>
+                <label id="name-label" for="name">Name:</label>
+                <input type="text" required id="name" name="user_name" placeholder="Enter name here">
+               </div>
+               <div>
+                <label id="address-label" >Address:</label>
+                <input type="Address"  id="address" name="user_address" 
+                placeholder="Enter address here">
+               </div>
+               <div>
+                <label id="email-label" for="name">Email id:</label>
+                <input type="email" required id="email" name="user_email" 
+                placeholder="Enter email id here">
+               </div>
+               <div>
+                <label id="number-label" for="phone">Phone Number:</label>
+                <input type="number"  id="number" name="user_number" 
+                placeholder="Enter 10 digit number" min="1" max="9">
+               </div>
+               <label for="Gender">Gender</label>
+               <p>
+                <input type="radio" name="gender" value="male" checked>Male<br>
+                <input type="radio" name="gender" value="female" checked>Female<br>
+                <input type="radio" name="gender" value="other" checked>Other<br>
+        </p>
+        <label for="date-label">Date of proposed outing</label>
+        <input type="date" name="bday">
+      </fieldset>
+      <fieldset>
+        <label for="Gender">Check all the apply</label>
+        <p>
+            <input type="checkbox" name="tattoo" value="tattoo">I have no tattos<br>
+            <input type="checkbox" name="work" value="work">still a student<br>
+            <input type="checkbox" name="language" value="language">language known are c and java
+        </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    </fieldset>
+    <fieldset>
+        <div>
+            <label for="politics">Education level completed</label>
+            <select id="dropdown2">
+                <option value="uviversity">University</option>
+                <option value="college">College</option>
+                <option value="secondary">High School</option>
+                <option value="None">None</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Essay selection</legend>
+        <div>
+            <label for="msg"></label>
+            <p> In 50 words</p>
+            <textarea id="msg" name="user_message"
+            rows="4" cols="50" placeholder="Enter text here"></textarea>
+            <p>Upload police clearance certificate,bank statement and medical certificate here:<button>Attach file</button></p>
+        </div>
+    </fieldset>
+    <div id="submitbutton">
+        <button type="submit" id="submit">
+            send you application
+        </button>
+    </div>
+     </form>
+</div>
